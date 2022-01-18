@@ -1,11 +1,16 @@
 import React from 'react';
+import Bio from './Bio';
+import styled from 'styled-components';
+
+const Container = styled.section`
+  text-align: center;
+`;
 
 const App = () => {
   return (
-    <div className="container">
-      <div className="left-content">Avatar / Bio </div>
-      <div className="right-content">Main Content</div>
-    </div>
+    <Container>
+      <Bio />
+    </Container>
   );
 };
 
