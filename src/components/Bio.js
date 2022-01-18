@@ -2,10 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import bioAvatar from '../assets/bio-ra-avatar.png';
 
-const Wrapper = styled.div`
-  margin: 80px auto 50px;
-  padding: 40px;
-`;
+const Wrapper = styled.div``;
 
 const Image = styled.img.attrs({
   src: `${bioAvatar}`,
