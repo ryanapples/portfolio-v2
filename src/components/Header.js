@@ -1,20 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Nav = styled.nav`
+import logo from '../assets/ra-logo.png';
+
+const HeaderWrapper = styled.nav`
   position: fixed;
   top: 0;
 `;
 
-const NavContent = styled.div`
+const ImageWrapper = styled.div`
   padding: 15px 20px;
+`;
+
+const Image = styled.img`
+  width: 40px;
+  max-width: 100%;
 `;
 
 const Header = () => {
   return (
-    <Nav>
-      <NavContent>Header</NavContent>
-    </Nav>
+    <HeaderWrapper>
+      <ImageWrapper>
+        <Image src={logo} alt="RA Logo" />
+      </ImageWrapper>
+    </HeaderWrapper>
   );
 };
 
