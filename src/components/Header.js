@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import logo from '../assets/ra-logo.png';
+import logo from '../assets/ra-logo.svg';
 
 const HeaderWrapper = styled.nav`
   position: fixed;
@@ -9,7 +9,7 @@ const HeaderWrapper = styled.nav`
 `;
 
 const ImageWrapper = styled.div`
-  padding: 15px 20px;
+  padding: 20px;
 `;
 
 const Image = styled.img`
