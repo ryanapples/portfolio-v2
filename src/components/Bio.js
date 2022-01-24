@@ -1,10 +1,9 @@
 import React from 'react';
+
 import styled from 'styled-components';
 import bioAvatar from '../assets/bio-ra-avatar.png';
 
-const Wrapper = styled.div`
-  padding: 0 20px;
-`;
+const Wrapper = styled.div``;
 
 const Image = styled.img.attrs({
   src: `${bioAvatar}`,
@@ -18,14 +17,14 @@ const Image = styled.img.attrs({
 `;
 
 const Name = styled.h1`
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 600;
-  margin: 20px auto;
+  margin: 15px auto;
   text-align: center;
 `;
 
 const BioContent = styled.p`
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   margin-top: 0;
   max-width: 400px;

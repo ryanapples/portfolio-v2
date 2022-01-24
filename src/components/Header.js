@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import logo from '../assets/ra-logo.svg';
+import headerLogo from '../assets/ra-logo.svg';
 
 const HeaderWrapper = styled.nav`
   position: fixed;
@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <ImageWrapper>
-        <Image src={logo} alt="RA Logo" />
+        <Image src={headerLogo} alt="RA Logo" />
       </ImageWrapper>
     </HeaderWrapper>
   );

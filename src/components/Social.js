@@ -15,18 +15,35 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
+  pointer-events: auto;
   list-style-type: none;
-  padding-right: 10px;
+  padding-right: 15px;
+`;
+
+const Link = styled.a`
+  color: #fff;
+  text-decoration: none;
 `;
 
 const Social = () => {
   return (
     <SocialWrapper>
       <List>
-        <ListItem>Linkedin</ListItem>
-        <ListItem>Github</ListItem>
-        <ListItem>Instagram</ListItem>
-        <ListItem>Twitter</ListItem>
+        <ListItem>
+          <Link target="_blank" href="https://www.linkedin.com/in/ryanapples/">
+            Linkedin
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link target="_blank" href="https://github.com/ryanapples">
+            Github
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link target="_blank" href="https://www.instagram.com/pogitechie/">
+            Instagram
+          </Link>
+        </ListItem>
       </List>
     </SocialWrapper>
   );
