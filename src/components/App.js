@@ -1,30 +1,31 @@
 import React from 'react';
 
-import './App.css';
+// Styles
 import styled from 'styled-components';
+import { GlobalStyle } from '../styles/index';
 
+// Components
 import Bio from './Bio';
 import Header from './Header';
 import Social from './Social';
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: 100px;
+const Container = styled.main`
+  margin: 0px auto;
   width: 100%;
-  height: 100vh;
+  max-width: 1350px;
+  min-height: 100vh;
 `;
 
 const App = () => {
   return (
-    <div>
+    <>
+      <GlobalStyle />
       <Header />
       <Container>
         <Bio />
       </Container>
       <Social />
-    </div>
+    </>
   );
 };
 
