@@ -35,7 +35,10 @@ const Social = () => {
           </Link>
         </ListItem>
         <ListItem>
-          <Link target="_blank" href="https://github.com/ryanapples">
+          <Link
+            target="_blank"
+            href="https://github.com/ryanapples?tab=overview&from=2022-01-01&to=2022-01-24"
+          >
             Github
           </Link>
         </ListItem>

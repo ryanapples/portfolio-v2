@@ -15,7 +15,7 @@ const GridWrapper = styled.ul`
   grid-gap: 60px;
   max-width: 650px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 20px;
 `;
 
 const GridList = styled.li`
@@ -32,7 +32,6 @@ const ListItemHeader = styled.h3`
 
 class About extends React.Component {
   renderGridList() {
-    console.log(this.props.gridList);
     return this.props.gridList.map((item) => {
       return (
         <GridList className="grid-item">
@@ -57,13 +56,3 @@ class About extends React.Component {
 }
 
 export default About;
-
-// const About = (props) => {
-//   return (
-//     <AboutWrapper>
-//       <GridWrapper>{renderGridList(props)}</GridWrapper>
-//     </AboutWrapper>
-//   );
-// };
-
-// export default About;
