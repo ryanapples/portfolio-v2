@@ -18,18 +18,10 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background: #005c97; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #363795,
-      #005c97
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      #363795,
-      #005c97
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: white;
+    background: var(--background-fallback);
+    background: var(--background-webkit);
+    background: var(--background);
+    color: var(--white);
   }
 
   main {
