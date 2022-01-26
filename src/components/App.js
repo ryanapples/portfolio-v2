@@ -5,9 +5,7 @@ import styled from 'styled-components';
 import { GlobalStyle } from '../styles/index';
 
 // Components
-import Bio from './Bio';
-import Header from './Header';
-import Social from './Social';
+import { Header, Bio, Social } from './index';
 
 const Container = styled.main`
   margin: 0px auto;

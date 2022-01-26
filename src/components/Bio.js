@@ -27,7 +27,7 @@ const StyledBioSection = styled.section`
 
   h1 {
     font-family: var(--font-mono);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 20px;
     margin-bottom: 20px;
   }
@@ -64,7 +64,7 @@ const StyledBioSection = styled.section`
 `;
 
 const Bio = () => {
-  const headerOne = <h1>Ohayo, my name is</h1>;
+  const headerOne = <h1>Ohayo! My name is</h1>;
   const headerTwo = <h2 className="big-heading">Ryan Apellanes</h2>;
   const headerThree = <h3 className="big-heading">& i do dev stuff.</h3>;
   const paragraph = (
