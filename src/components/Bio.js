@@ -27,7 +27,7 @@ const StyledBioSection = styled.section`
 
   h1 {
     font-family: var(--font-mono);
-    font-weight: 500;
+    font-weight: var(--font-w-semibold);
     font-size: 20px;
     margin-bottom: 20px;
   }
@@ -35,7 +35,7 @@ const StyledBioSection = styled.section`
   h2 {
     font-family: var(--font-sans);
     font-size: 80px;
-    font-weight: 700;
+    font-weight: var(--font-w-bold);
     margin: 0;
     @media (max-width: 480px) {
       font-size: 40px;
@@ -44,7 +44,7 @@ const StyledBioSection = styled.section`
 
   h3 {
     font-family: var(--font-mono);
-    font-weight: 500;
+    font-weight: var(--font-w-semibold);
     font-size: 40px;
     font-style: italic;
     margin-top: 10px;
@@ -53,7 +53,7 @@ const StyledBioSection = styled.section`
   p {
     font-family: var(--font-sans);
     font-size: 20px;
-    font-weight: 400;
+    font-weight: var(--font-w-regular);
     max-width: 500px;
     margin: 20px auto 0;
     @media (max-width: 480px) {
@@ -64,7 +64,7 @@ const StyledBioSection = styled.section`
 `;
 
 const Bio = () => {
-  const headerOne = <h1>Ohayo, my name is</h1>;
+  const headerOne = <h1>Ohayo! My name is</h1>;
   const headerTwo = <h2 className="big-heading">Ryan Apellanes</h2>;
   const headerThree = <h3 className="big-heading">& i do dev stuff.</h3>;
   const paragraph = (
