@@ -10,7 +10,7 @@ const StyledBioSection = styled.section`
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
-  padding: 0 50px;
+  padding: 0 150px;
   @media (max-width: 768px) {
     padding: 0 25px;
   }
@@ -20,48 +20,65 @@ const StyledBioSection = styled.section`
   }
 
   h1,
+  h2,
   h3 {
-    margin: 0 0 15px;
+    margin: 0;
   }
 
   h1 {
-    font-size: 16px;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 
   h2 {
-    font-size: 70px;
-    font-weight: 600;
+    font-family: var(--font-sans);
+    font-size: 80px;
+    font-weight: 700;
     margin: 0;
     @media (max-width: 480px) {
       font-size: 40px;
     }
   }
 
+  h3 {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    font-size: 40px;
+    font-style: italic;
+    margin-top: 10px;
+  }
+
   p {
-    font-size: 16px;
+    font-family: var(--font-sans);
+    font-size: 20px;
     font-weight: 400;
-    margin-top: 0;
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 500px;
+    margin: 20px auto 0;
+    @media (max-width: 480px) {
+      max-width: 100%;
+      padding-right: 15px;
+    }
   }
 `;
 
 const Bio = () => {
-  const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Ryan Apellanes</h2>;
-  const three = <h3 className="big-heading">& i do dev stuff.</h3>;
-  const four = (
+  const headerOne = <h1>Ohayo, my name is</h1>;
+  const headerTwo = <h2 className="big-heading">Ryan Apellanes</h2>;
+  const headerThree = <h3 className="big-heading">& i do dev stuff.</h3>;
+  const paragraph = (
     <>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus,
         rerum. Ipsa quod repellat hic dolor praesentium amet animi, explicabo
         quidem odit vitae adipisci soluta a quisquam magnam voluptatum atque
-        nobis. .
+        nobis.
       </p>
     </>
   );
 
-  const items = [one, two, three, four];
+  const items = [headerOne, headerTwo, headerThree, paragraph];
 
   return (
     <StyledBioSection>
