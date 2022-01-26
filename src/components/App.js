@@ -12,7 +12,7 @@ import Social from './Social';
 const Container = styled.main`
   margin: 0px auto;
   width: 100%;
-  max-width: 1350px;
+  max-width: 1400px;
   min-height: 100vh;
 `;
 
