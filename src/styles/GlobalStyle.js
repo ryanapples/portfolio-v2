@@ -36,6 +36,10 @@ const GlobalStyle = createGlobalStyle`
       max-width: 100%;
     }
   }
+
+  svg {
+    fill: var(--white);
+  }
 `;
 
 export default GlobalStyle;

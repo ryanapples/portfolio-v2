@@ -1,23 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
+import SocialIcon from './icons/SocialIcon';
 
 const SocialWrapper = styled.div`
   position: fixed;
-  bottom: 20px;
+  bottom: 25px;
   width: 100%;
 `;
 
 const List = styled.ul`
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
   margin: 0;
-  padding: 0 20px;
+  padding: 25px 25px 0;
 `;
 
 const ListItem = styled.li`
   pointer-events: auto;
   list-style-type: none;
-  padding-right: 15px;
+  padding-top: 20px;
+  width: 24px;
+  height: 24px;
 `;
 
 const Link = styled.a`
@@ -25,28 +29,32 @@ const Link = styled.a`
   text-decoration: none;
 `;
 
+const socialArr = [
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/ryanapples/',
+  },
+  {
+    name: 'Github',
+    url: 'https://github.com/ryanapples?tab=overview&from=2022-01-01&to=2022-01-24',
+  },
+  {
+    name: 'Instagram',
+    url: 'https://www.instagram.com/pogitechie/',
+  },
+];
+
 const Social = () => {
   return (
     <SocialWrapper>
       <List>
-        <ListItem>
-          <Link target="_blank" href="https://www.linkedin.com/in/ryanapples/">
-            Linkedin
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link
-            target="_blank"
-            href="https://github.com/ryanapples?tab=overview&from=2022-01-01&to=2022-01-24"
-          >
-            Github
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link target="_blank" href="https://www.instagram.com/pogitechie/">
-            Instagram
-          </Link>
-        </ListItem>
+        {socialArr.map(({ name, url }, i) => (
+          <ListItem key={i}>
+            <a href={url} aria-label={name} target="_blank" rel="noreferrer">
+              <SocialIcon name={name} />
+            </a>
+          </ListItem>
+        ))}
       </List>
     </SocialWrapper>
   );
