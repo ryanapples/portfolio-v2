@@ -6,10 +6,11 @@ import headerLogo from '../images/ra-logo.svg';
 const HeaderWrapper = styled.nav`
   position: fixed;
   top: 0;
+  width: 100%;
 `;
 
 const ImageWrapper = styled.div`
-  padding: 20px;
+  padding: 25px;
 `;
 
 const Image = styled.img`

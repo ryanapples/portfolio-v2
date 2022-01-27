@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styled from 'styled-components';
 
 const StyledBioSection = styled.section`
@@ -10,7 +9,7 @@ const StyledBioSection = styled.section`
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
-  padding: 0 150px;
+  padding: 0 130px;
   @media (max-width: 768px) {
     padding: 0 25px;
   }
