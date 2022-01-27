@@ -10,6 +10,7 @@ const StyledBioSection = styled.section`
   align-items: flex-start;
   min-height: 100vh;
   padding: 0 130px;
+
   @media (max-width: 768px) {
     padding: 0 25px;
   }
@@ -36,8 +37,9 @@ const StyledBioSection = styled.section`
     font-size: 80px;
     font-weight: var(--font-w-bold);
     margin: 0;
+
     @media (max-width: 480px) {
-      font-size: 40px;
+      font-size: 45px;
     }
   }
 
@@ -46,7 +48,11 @@ const StyledBioSection = styled.section`
     font-weight: var(--font-w-semibold);
     font-size: 40px;
     font-style: italic;
-    margin-top: 10px;
+    margin-top: 5px;
+
+    @media (max-width: 480px) {
+      font-size: 22px;
+    }
   }
 
   p {
@@ -55,7 +61,9 @@ const StyledBioSection = styled.section`
     font-weight: var(--font-w-regular);
     max-width: 500px;
     margin: 20px auto 0;
+
     @media (max-width: 480px) {
+      font-size: 16px;
       max-width: 100%;
       padding-right: 15px;
     }
