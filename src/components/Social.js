@@ -24,11 +24,6 @@ const ListItem = styled.li`
   height: 24px;
 `;
 
-const Link = styled.a`
-  color: #fff;
-  text-decoration: none;
-`;
-
 const socialArr = [
   {
     name: 'LinkedIn',
