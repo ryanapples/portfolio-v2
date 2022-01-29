@@ -12,7 +12,7 @@ const StyledBioSection = styled.section`
   padding: 0 130px;
 
   @media (max-width: 768px) {
-    padding: 0 25px;
+    padding: 0 65px;
   }
 
   @media (max-width: 480px) {
