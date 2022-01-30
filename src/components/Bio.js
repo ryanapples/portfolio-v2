@@ -10,14 +10,14 @@ const StyledBioSection = styled.section`
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
-  padding: 0 160px;
+  padding: 0 130px;
 
   @media (max-width: 768px) {
     padding: 0 80px;
   }
 
   @media (max-width: 480px) {
-    padding-bottom: 10vh;
+    padding: 0 24px 0;
   }
 
   h1,
@@ -35,7 +35,7 @@ const StyledBioSection = styled.section`
 
   h2 {
     font-family: var(--font-sans);
-    font-size: 90px;
+    font-size: 80px;
     font-weight: var(--font-w-bold);
     margin: 0;
 
