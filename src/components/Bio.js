@@ -90,7 +90,7 @@ const Bio = () => {
     opacity: 1,
     y: 0,
     from: { opacity: 0, y: 30 },
-    delay: 200,
+    delay: 500,
   });
 
   return (
