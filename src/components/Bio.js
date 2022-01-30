@@ -72,8 +72,8 @@ const StyledBioSection = styled.section`
 
 const Bio = () => {
   const headerOne = <h1>Ohayo! My name is</h1>;
-  const headerTwo = <h2 className="big-heading">Ryan Apellanes</h2>;
-  const headerThree = <h3 className="big-heading">& i do dev stuff.</h3>;
+  const headerTwo = <h2 className="header-large">Ryan Apellanes</h2>;
+  const headerThree = <h3 className="header-large">& i do dev stuff.</h3>;
   const paragraph = (
     <>
       <p>
@@ -86,6 +86,7 @@ const Bio = () => {
   );
 
   const items = [headerOne, headerTwo, headerThree, paragraph];
+  console.log('items', items);
 
   return (
     <StyledBioSection>
