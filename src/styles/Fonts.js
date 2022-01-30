@@ -46,14 +46,12 @@ const createFontFaces = (family, style = 'normal') => {
   let styles = '';
 
   for (const [weight, formats] of Object.entries(family[style])) {
-    const woff = formats[0];
-    const woff2 = formats[1];
+    const ttf = formats[0];
 
     styles += `
       @font-face {
         font-family: '${family.name}';
-        src: url(${woff2}) format('woff2'),
-            url(${woff}) format('woff');
+        src: url(${ttf}) format('truetype');
         font-weight: ${weight};
         font-style: ${style};
         font-display: auto;
