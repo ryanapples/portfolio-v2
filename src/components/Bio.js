@@ -10,10 +10,10 @@ const StyledBioSection = styled.section`
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
-  padding: 0 130px;
+  padding: 0 160px;
 
   @media (max-width: 768px) {
-    padding: 0 65px;
+    padding: 0 80px;
   }
 
   @media (max-width: 480px) {
@@ -38,6 +38,10 @@ const StyledBioSection = styled.section`
     font-size: 90px;
     font-weight: var(--font-w-bold);
     margin: 0;
+
+    @media (max-width: 821px) {
+      font-size: 70px;
+    }
 
     @media (max-width: 480px) {
       font-size: 45px;
@@ -90,7 +94,7 @@ const Bio = () => {
     opacity: 1,
     y: 0,
     from: { opacity: 0, y: 30 },
-    delay: 500,
+    delay: 400,
   });
 
   return (
