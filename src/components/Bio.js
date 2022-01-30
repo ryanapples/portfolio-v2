@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTrail, animated } from 'react-spring';
 
 const StyledBioSection = styled.section`
   display: flex;
@@ -34,7 +35,7 @@ const StyledBioSection = styled.section`
 
   h2 {
     font-family: var(--font-sans);
-    font-size: 80px;
+    font-size: 90px;
     font-weight: var(--font-w-bold);
     margin: 0;
 
@@ -60,9 +61,7 @@ const StyledBioSection = styled.section`
     font-size: 20px;
     font-weight: var(--font-w-regular);
     max-width: 500px;
-    margin: 20px auto 0;
-
-    @media (max-width: 480px) {
+    margin-top: 20px @media (max-width: 480px) {
       font-size: 16px;
       max-width: 100%;
       padding-right: 15px;
@@ -86,13 +85,21 @@ const Bio = () => {
   );
 
   const items = [headerOne, headerTwo, headerThree, paragraph];
-  console.log('items', items);
+  const trail = useTrail(items.length, {
+    config: { mass: 3, tension: 789, friction: 100 },
+    opacity: 1,
+    y: 0,
+    from: { opacity: 0, y: 30 },
+    delay: 200,
+  });
 
   return (
     <StyledBioSection>
       <>
-        {items.map((item, i) => (
-          <div key={i}>{item}</div>
+        {trail.map(({ ...style }, i) => (
+          <animated.div key={i} style={style} className="trail-item">
+            {items[i]}
+          </animated.div>
         ))}
       </>
     </StyledBioSection>

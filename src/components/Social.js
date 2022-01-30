@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import SocialIcon from './icons/SocialIcon';
+import { useTrail, animated } from 'react-spring';
 
 const SocialWrapper = styled.div`
   position: fixed;
@@ -16,7 +17,7 @@ const List = styled.ul`
   padding: 25px 25px 0;
 `;
 
-const ListItem = styled.li`
+const ListItem = styled(animated.li)`
   pointer-events: auto;
   list-style-type: none;
   padding-top: 20px;
@@ -40,13 +41,26 @@ const socialArr = [
 ];
 
 const Social = () => {
+  const trail = useTrail(socialArr.length, {
+    config: { mass: 3, tension: 1000, friction: 200 },
+    opacity: 1,
+    y: 0,
+    from: { opacity: 0, y: 20 },
+    delay: 1000,
+  });
+
   return (
     <SocialWrapper>
       <List>
-        {socialArr.map(({ name, url }, i) => (
-          <ListItem key={i}>
-            <a href={url} aria-label={name} target="_blank" rel="noreferrer">
-              <SocialIcon name={name} />
+        {trail.map(({ ...style }, i) => (
+          <ListItem key={i} style={style}>
+            <a
+              href={socialArr[i].url}
+              aria-label={socialArr[i].name}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <SocialIcon name={socialArr[i].name} />
             </a>
           </ListItem>
         ))}
@@ -56,3 +70,11 @@ const Social = () => {
 };
 
 export default Social;
+
+// {socialArr.map(({ name, url }, i) => (
+//   <ListItem key={i}>
+//     <a href={url} aria-label={name} target="_blank" rel="noreferrer">
+//       <SocialIcon name={name} />
+//     </a>
+//   </ListItem>
+// ))}
