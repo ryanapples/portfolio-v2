@@ -1,6 +1,6 @@
 {
   "short_name": "ryanapples.io",
-  "name": "Ryan Apellanes Website",
+  "name": "Ryan Apellanes",
   "icons": [
     {
       "src": "ra-favicon.pong",
@@ -16,5 +16,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#005c97"
 }
