@@ -24,7 +24,7 @@ Hello world! I finally reconnected with a neglected task a couple of weeks ago, 
 
 [react-spring](https://react-spring.io/)
 
-[infinitelule/react-reduce-motion](https://github.com/infiniteluke/react-reduce-motion)
+[infiniteluke/react-reduce-motion](https://github.com/infiniteluke/react-reduce-motion)
 
 [Google Fonts](https://fonts.google.com/)
 
