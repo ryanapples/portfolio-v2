@@ -79,11 +79,12 @@ const StyledBioSection = styled.section`
     @media (max-width: 480px) {
       font-size: 16px;
       max-width: 100%;
-      padding-right: 15px;
+      padding-right: 10px;
     }
 
     @media only screen and (max-height: 575.98px) and (orientation: landscape) {
       font-size: 16px;
+      max-width: 350px;
     }
   }
 `;
