@@ -6,12 +6,12 @@ import { useTrail, animated } from 'react-spring';
 const SocialWrapper = styled.div`
   position: fixed;
   bottom: 25px;
-  width: 100%;
+  right: 0;
 `;
 
 const List = styled.ul`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-end;
   margin: 0;
   padding: 25px 25px 0;
@@ -20,7 +20,7 @@ const List = styled.ul`
 const ListItem = styled(animated.li)`
   pointer-events: auto;
   list-style-type: none;
-  padding-top: 20px;
+  padding-left: 20px;
   width: 24px;
   height: 24px;
 `;
@@ -56,7 +56,7 @@ const Social = () => {
           <ListItem key={i} style={style}>
             <a
               href={socialArr[i].url}
-              aria-label={socialArr[i].name}
+              aria-label={`${socialArr[i].name} Icon`}
               target="_blank"
               rel="noreferrer"
             >

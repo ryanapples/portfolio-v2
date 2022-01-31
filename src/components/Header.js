@@ -16,7 +16,12 @@ const ImageWrapper = styled.div`
 
 const Image = styled.img`
   width: 40px;
+  height: auto;
   max-width: 100%;
+
+  @media only screen and (max-height: 575.98px) and (orientation: landscape) {
+    width: 32px;
+  }
 `;
 
 const Header = () => {

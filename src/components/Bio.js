@@ -35,7 +35,7 @@ const StyledBioSection = styled.section`
 
   h2 {
     font-family: var(--font-sans);
-    font-size: 80px;
+    font-size: 90px;
     font-weight: var(--font-w-bold);
     margin: 0;
 
@@ -44,6 +44,10 @@ const StyledBioSection = styled.section`
     }
 
     @media (max-width: 480px) {
+      font-size: 45px;
+    }
+
+    @media only screen and (max-height: 575.98px) and (orientation: landscape) {
       font-size: 45px;
     }
   }
@@ -56,6 +60,10 @@ const StyledBioSection = styled.section`
     margin-top: 5px;
 
     @media (max-width: 480px) {
+      font-size: 24px;
+    }
+
+    @media only screen and (max-height: 575.98px) and (orientation: landscape) {
       font-size: 22px;
     }
   }
@@ -64,11 +72,17 @@ const StyledBioSection = styled.section`
     font-family: var(--font-sans);
     font-size: 20px;
     font-weight: var(--font-w-regular);
-    max-width: 500px;
-    margin-top: 20px @media (max-width: 480px) {
+    max-width: 550px;
+    margin-top: 20px;
+
+    @media (max-width: 480px) {
       font-size: 16px;
       max-width: 100%;
       padding-right: 15px;
+    }
+
+    @media only screen and (max-height: 575.98px) and (orientation: landscape) {
+      font-size: 16px;
     }
   }
 `;
@@ -80,10 +94,10 @@ const Bio = () => {
   const paragraph = (
     <>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus,
-        rerum. Ipsa quod repellat hic dolor praesentium amet animi, explicabo
-        quidem odit vitae adipisci soluta a quisquam magnam voluptatum atque
-        nobis.
+        Front End Engineer with an affinity towards learning about our growing
+        world of technology. Developing within Web2, but actively curious of
+        Web3. A proud crazy cat dad for Kiki and Loafie, and lover of spooky
+        podcasts.
       </p>
     </>
   );
