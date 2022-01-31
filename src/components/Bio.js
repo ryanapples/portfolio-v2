@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useReduceMotion } from 'react-reduce-motion';
 import { useTrail, animated } from 'react-spring';
 
 const StyledBioSection = styled.section`
@@ -103,12 +104,16 @@ const Bio = () => {
   );
 
   const items = [headerOne, headerTwo, headerThree, paragraph];
+  const reduceMotion = useReduceMotion();
   const trail = useTrail(items.length, {
     config: { mass: 3, tension: 789, friction: 100 },
     opacity: 1,
     y: 0,
-    from: { opacity: 0, y: 30 },
-    delay: 400,
+    from: {
+      opacity: reduceMotion ? 1 : 0,
+      y: reduceMotion ? 0 : 30,
+    },
+    delay: reduceMotion ? 0 : 400,
   });
 
   return (

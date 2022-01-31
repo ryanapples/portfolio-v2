@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import SocialIcon from './icons/SocialIcon';
+import { useReduceMotion } from 'react-reduce-motion';
 import { useTrail, animated } from 'react-spring';
 
 const SocialWrapper = styled.div`
@@ -41,12 +42,16 @@ const socialArr = [
 ];
 
 const Social = () => {
+  const reduceMotion = useReduceMotion();
   const trail = useTrail(socialArr.length, {
     config: { mass: 3, tension: 1000, friction: 200 },
     opacity: 1,
     y: 0,
-    from: { opacity: 0, y: 20 },
-    delay: 1000,
+    from: {
+      opacity: reduceMotion ? 1 : 0,
+      y: reduceMotion ? 0 : 20,
+    },
+    delay: reduceMotion ? 0 : 1000,
   });
 
   return (
