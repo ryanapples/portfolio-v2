@@ -1,17 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import SocialIcon from './icons/SocialIcon';
+import { useReduceMotion } from 'react-reduce-motion';
 import { useTrail, animated } from 'react-spring';
 
 const SocialWrapper = styled.div`
   position: fixed;
   bottom: 25px;
-  width: 100%;
+  right: 0;
 `;
 
 const List = styled.ul`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-end;
   margin: 0;
   padding: 25px 25px 0;
@@ -20,7 +21,7 @@ const List = styled.ul`
 const ListItem = styled(animated.li)`
   pointer-events: auto;
   list-style-type: none;
-  padding-top: 20px;
+  padding-left: 20px;
   width: 24px;
   height: 24px;
 `;
@@ -41,12 +42,16 @@ const socialArr = [
 ];
 
 const Social = () => {
+  const reduceMotion = useReduceMotion();
   const trail = useTrail(socialArr.length, {
     config: { mass: 3, tension: 1000, friction: 200 },
     opacity: 1,
     y: 0,
-    from: { opacity: 0, y: 20 },
-    delay: 1000,
+    from: {
+      opacity: reduceMotion ? 1 : 0,
+      y: reduceMotion ? 0 : 20,
+    },
+    delay: reduceMotion ? 0 : 1000,
   });
 
   return (
@@ -56,7 +61,7 @@ const Social = () => {
           <ListItem key={i} style={style}>
             <a
               href={socialArr[i].url}
-              aria-label={socialArr[i].name}
+              aria-label={`${socialArr[i].name} Icon`}
               target="_blank"
               rel="noreferrer"
             >
